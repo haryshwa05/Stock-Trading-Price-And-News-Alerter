@@ -48,7 +48,8 @@ difference_percentage = (difference / float(yesterday_closing_price)) * 100
 print(f"The difference percentage is: {round(difference_percentage, 2)}%")
 
 
-news_params = {
+if difference_percentage > 5:  #To set the stock threshold for which you want to be alerted
+    news_params = {
         "apikey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME
 
